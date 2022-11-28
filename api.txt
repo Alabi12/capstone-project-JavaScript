@@ -1,0 +1,8 @@
+https://api.tvmaze.com/search/shows?q=<search-term>
+
+https://api.tvmaze.com/shows/<show-id>
+
+https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/
+
+
+//App Id V9PGHS19NclaPI0zbq7b
