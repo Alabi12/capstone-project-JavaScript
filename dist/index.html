@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FadAlabi</title>
+    <title>FAMovie</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -26,22 +26,28 @@
       <div class="container">
         <nav>
           <div class="logo">
-            <p>MicroFlix</p>
+            <img src="./Capstone-2-logo.png" alt="Website logo">
           </div>
           <ul class="navigation">
             <li class="active">
               <a href="#">Home <span id="totalMovies"></span></a>
             </li>
-            <!-- <li><a href="#">Movies</a></li>
+            <li><a href="#">Movies</a></li>
             <li><a href="#">TV Shows</a></li>
-            <li><a href="#">My List</a></li> -->
+            <li><a href="#">My List</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="row" id="show-movies"></div>
+      <div id="main-card" class="container">
+        <div id="movie-card">
+          <div id="movie-img"></div>
+          <div id="movie-info">
+            <h2 id="movie-title"></h2>
+            <p id="movie-description"></p>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
@@ -50,14 +56,6 @@
       </div>
     </footer>
 
-    <section class="popup popup-comments hide">
-      <div class="popup-header">
-        <i id="popup-close" class="fa-solid fa-xmark fa-2x"></i>
-      </div>
-      <div class="popup-container">
-        
-      </div>
-    </section>
-    <script type="modules" src="./index.js"></script>
+    <script type="module" src="index.js"></script>
   </body>
 </html>

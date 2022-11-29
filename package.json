@@ -44,5 +44,14 @@
   },
   "devServer": {
     "host": "127.0.0.1"
-  }
+  },
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alabi12/capstone-project-JavaScript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alabi12/capstone-project-JavaScript/issues"
+  },
+  "homepage": "https://github.com/Alabi12/capstone-project-JavaScript#readme"
 }

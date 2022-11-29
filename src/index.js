@@ -7,7 +7,7 @@ const getMovieDetails = async (movieId) => {
   return myJson;
 };
 
-const movieTitle = document.querySelector('#movie-title');
+const movieTitle = document.querySelector('#main-card');
 const apiData = loadApi().then((data) => {
   data.forEach((movie) => {
     // Get Movie Name
@@ -17,21 +17,21 @@ const apiData = loadApi().then((data) => {
       imageUrl = movie.show.image.medium;
     }
     // End Getting Movie Image    // movieTitle.insertAdjacentHTML("beforeend", movie.show.name);
-    movieTitle.innerHTML += `<div id="main-card">
-    <div id="movie-card card">
+    movieTitle.innerHTML += `
+    <div id="movie-card">
       <div id="movie-img"><img src="${imageUrl}" alt="${movie.show.name}"> </div>
       <div id="movie-info">
-        <h2 id="movie-title">${movie.show.name}</h2>
+        <h2 id="movie-title">${movie.show.name} <button class="like-icon"><i class="fa-regular fa-heart"></i></br>3</button></h2>
         <p id="movie-description"></p>
-        <button value="${movie.show.id}" class="movie-button">Comment</button>
+        <button id="${movie.show.id}" class="movie-button">Comment</button>
+        <button id="${movie.show.id}" class="movie-button">Reservation</button>
       </div>
-    </div>
-  </div>`;
+    </div>`;
 
     const movieButtons = document.querySelectorAll('.movie-button');
     movieButtons.forEach((button) => {
       button.addEventListener('click', (e) => {
-        getMovieDetails(e.target.value).then((data) => {
+        getMovieDetails(e.target.id).then((data) => {
           const movieDescription = document.querySelector('#movie-description');
           movieDescription.innerHTML = data.summary;
         });
