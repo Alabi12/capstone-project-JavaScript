@@ -120,6 +120,17 @@ main {
   padding-top: 10px;
 }
 
+.like-icon {
+  color: red;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+}
+
+.like-icon i {
+  font-size: 26px;
+}
+
 .movie-banner-img {
   width: 100%;
   height: 370px;
