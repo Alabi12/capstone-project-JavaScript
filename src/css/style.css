@@ -66,6 +66,12 @@ nav {
   margin: 0 1rem;
 }
 
+.active a {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  padding-bottom: 5px;
+}
+
 .navigation li a {
   text-decoration: none;
   transition: all 1s;
@@ -76,12 +82,6 @@ nav {
 .navigation li a:hover {
   color: var(--color-primary);
   border-bottom: 1px solid var(--color-primary);
-}
-
-.active a {
-  color: var(--color-primary);
-  border-bottom: 1px solid var(--color-primary);
-  padding-bottom: 5px;
 }
 
 main {
@@ -133,8 +133,16 @@ main {
 
 footer {
   display: flex;
-  justify-content: center;
-  background-color: #2b2b2b;
+  justify-content: space-around;
+  background-color: var(--color-secondary);
+}
+
+.footer-logo {
+  background-image: url(../images/Capstone-2-logo.png);
+  background-position: 20% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 230px;
 }
 
 .footer-section {
@@ -183,7 +191,7 @@ button {
   justify-content: center;
   align-items: center;
   width: 80%;
-  gap: 0px;
+  gap: 0;
 }
 
 #movie-title {
