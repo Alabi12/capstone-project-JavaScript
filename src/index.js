@@ -1,5 +1,5 @@
-import "./css/style.css";
-import loadApi from "./modules/loadApi.js";
+import './css/style.css';
+import loadApi from './modules/loadApi.js';
 // Fetch Data From API
 const getMovieDetails = async (movieId) => {
   const response = await fetch(`https://api.tvmaze.com/shows/${movieId}`);
@@ -7,13 +7,11 @@ const getMovieDetails = async (movieId) => {
   return myJson;
 };
 
-const movieTitle = document.querySelector("#movie-title");
+const movieTitle = document.querySelector('#movie-title');
 const apiData = loadApi().then((data) => {
-  console.log(data);
   data.forEach((movie) => {
     // Get Movie Name
-    let imageUrl =
-      "https://static.tvmaze.com/uploads/images/medium_portrait/4/11308.jpg";
+    let imageUrl = 'https://static.tvmaze.com/uploads/images/medium_portrait/4/11308.jpg';
     // Get Movie Image
     if (movie.show.image) {
       imageUrl = movie.show.image.medium;
@@ -30,11 +28,12 @@ const apiData = loadApi().then((data) => {
     </div>
   </div>`;
 
-    const movieButtons = document.querySelectorAll(".movie-button");
+    const movieButtons = document.querySelectorAll('.movie-button');
     movieButtons.forEach((button) => {
-      button.addEventListener("click", (e) => {
+      button.addEventListener('click', (e) => {
         getMovieDetails(e.target.value).then((data) => {
-          console.log(data.summary);
+          const movieDescription = document.querySelector('#movie-description');
+          movieDescription.innerHTML = data.summary;
         });
       });
     });
