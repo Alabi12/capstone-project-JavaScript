@@ -1,5 +1,5 @@
 const checkForLikes = (movieId) => {
-  const likes = JSON.parse(localStorage.getItem('likes'));
+  const likes = JSON.parse(localStorage.getItem("likes"));
   let like = 0;
   likes.forEach((element) => {
     if (element.item_id === movieId) {
