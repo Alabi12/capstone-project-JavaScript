@@ -4,7 +4,6 @@ const checkForLikes = (movieId) => {
   likes.forEach((element) => {
     if (element.item_id === movieId) {
       like = element.likes;
-      like += 1;
     }
   });
   return like;

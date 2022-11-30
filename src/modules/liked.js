@@ -1,3 +1,5 @@
+import getLikes from './getLikes.js';
+
 const liked = async (movieId) => {
   const mBody = JSON.parse(`{"item_id": ${movieId}}`);
   const response = await fetch(
@@ -7,11 +9,12 @@ const liked = async (movieId) => {
       body: JSON.stringify(mBody),
       headers: {
         'Content-Type': 'application/json',
-      }, 
+      },
     },
   );
   await response; // extract JSON from the http response
   // do something with myJson
+  getLikes();
 };
 
 export default liked;
