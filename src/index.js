@@ -53,7 +53,6 @@ const apiData = loadApi().then((data) => {
         <h2 id="movie-title">${movie.show.name} <button id="${movie.show.id}" class="like-icon"><i id="${movie.show.id}" class="fa-regular fa-heart"></i></br><p id="${movie.show.id}" class="like-p">${checkForLikes(movie.show.id)}</p></button></h2>
         <p id="movie-description"></p>
         <button id="${movie.show.id}" class="movie-button">Comment</button>
-        <button id="${movie.show.id}" class="movie-button">Reservation</button>
       </div>
     </div>`;
 
@@ -144,14 +143,14 @@ const apiData = loadApi().then((data) => {
             Add Comments<span id="addCOmment"></span>
           </h2>
           <form id="addCommentForm">
-          <input type="text" placeholder="Name" name="name" />
-          <input type="hidden" placeholder="Name" name="movieId" value="${movieId}" />
+          <input type="text" placeholder="Your name..." name="name" />
+          <input type="hidden" placeholder="Your name..." name="movieId" value="${movieId}" />
           <textarea
               name="comment"
               id="comment"
               cols="30"
               rows="8"
-              placeholder="Comment"
+              placeholder="Your comment..."
               name="comment"
             ></textarea>
             <input type="submit" value="Submit" />
