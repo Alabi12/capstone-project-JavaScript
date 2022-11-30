@@ -1,0 +1,385 @@
+:root {
+  --color-primary: #ffe3b0;
+  --color-secondary: rgb(54, 54, 54);
+  --color-tertiary: white;
+  --color-font: white;
+}
+
+body {
+  background-color: rgb(212 162 36);
+  color: var(--color-font);
+  font-family: 'Montserrat', sans-serif;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  margin: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #545454;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 10px;
+  justify-content: space-around;
+}
+
+nav {
+  list-style-type: none;
+  display: flex;
+  background-color: var(--color-secondary);
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.logo {
+  background-image: url('../images/Capstone-2-logo.png');
+  width: 217px;
+  height: 45px;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.navigation {
+  list-style-type: none;
+  display: flex;
+}
+
+.navigation li {
+  margin: 0 1rem;
+}
+
+.active a {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  padding-bottom: 5px;
+}
+
+.navigation li a {
+  text-decoration: none;
+  transition: all 1s;
+  padding: 0 0 5px 0;
+  color: var(--color-font);
+}
+
+.navigation li a:hover {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+}
+
+main {
+  margin: 5rem 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  padding: 1rem;
+  margin: 1rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px 1px grey;
+}
+
+.card:hover {
+  border: 2px solid var(--color-primary);
+}
+
+.single-movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.title-rection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.like-icon {
+  color: red;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+}
+
+.like-icon i {
+  font-size: 26px;
+}
+
+.movie-banner-img {
+  width: 100%;
+  height: 370px;
+  border-radius: 5px;
+}
+
+.movie-banner {
+  width: 100%;
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--color-secondary);
+}
+
+.footer-logo {
+  background-image: url(../images/Capstone-2-logo.png);
+  background-position: 20% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 230px;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.movie-button {
+  background-color: #e2a12a;
+  width: 55%;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+  padding: 6px 0;
+  transition: 0.3s;
+}
+
+.movie-button:hover {
+  background-color: #dd9000;
+  width: 60%;
+}
+
+#movie-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 20px 0;
+  background-color: #414040;
+  transition: 0.3s;
+}
+
+#movie-card:hover {
+  background-color: #303030;
+}
+
+#movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 0;
+}
+
+#movie-title {
+  text-align: center;
+}
+
+#movie-description {
+  margin: 0;
+}
+
+.action-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: grey;
+  color: var(--color-font);
+  border: 1px solid grey;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.movie-likes p {
+  margin: 0;
+  padding: 10px 0 10px 0;
+  width: 100%;
+  text-align: right;
+}
+
+.movie-likes {
+  margin: 0;
+  padding: 0 0 10px 0;
+  width: 100%;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.popup {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: var(--color-secondary);
+}
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.popup-container::-webkit-scrollbar {
+  display: none;
+}
+
+.popup-header {
+  position: fixed;
+  top: 0;
+  right: 10px;
+  padding: 10px;
+}
+
+.popup-movie-banner {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+}
+
+.popup-movie-banner-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.popup-details {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.popup-description {
+  max-width: 70%;
+  font-weight: 400;
+}
+
+.comments-received {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input[type='text'] {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+input[type='submit'] {
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+  padding: 0 10px;
+  margin: 10px 0;
+}
+
+.add-comment-form {
+  width: 40%;
+}
+
+.hide {
+  display: none;
+}
+
+.fade-in-image {
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
