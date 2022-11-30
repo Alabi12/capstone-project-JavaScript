@@ -2,6 +2,25 @@ import './css/style.css';
 import loadApi from './modules/loadApi.js';
 import postComment from './modules/postComment.js';
 import getComments from './modules/comments.js';
+import getLikes from './modules/getLikes.js';
+
+// Likes
+const getLikesFirst = new Promise((resolve) => {
+  getLikes();
+  setTimeout(() => {
+    resolve('done');
+  }, 300);
+});
+getLikesFirst.then(() => {
+  new Promise((resolve) => {
+    loadApi();
+    setTimeout(() => {
+      resolve('done');
+    }, 300);
+  }).then(() => {
+    postComment();
+  });
+});
 
 // Fetch Data From API
 
@@ -27,7 +46,7 @@ const apiData = loadApi().then((data) => {
     <div id="movie-card">
       <div id="movie-img"><img src="${imageUrl}" alt="${movie.show.name}"> </div>
       <div id="movie-info">
-        <h2 id="movie-title">${movie.show.name} <button class="like-icon"><i class="fa-regular fa-heart"></i></br>3</button></h2>
+        <h2 id="movie-title">${movie.show.name}</h2>
         <p id="movie-description"></p>
         <button id="${movie.show.id}" class="movie-button">Comment</button>
         <button id="${movie.show.id}" class="movie-button">Reservation</button>
