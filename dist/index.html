@@ -12,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <script src="https://kit.fontawesome.com/e2597287a1.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,9 +25,8 @@
     <header>
       <div class="container">
         <nav>
-          <div class="logo">
-            <img src="./Capstone-2-logo.png" alt="Website logo">
-          </div>
+          <a href="index.html" class="logo">
+          </a>
           <ul class="navigation">
             <li class="active">
               <a href="#">Home <span id="totalMovies"></span></a>
@@ -39,23 +38,23 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main class="main-cont">
       <div id="main-card" class="container">
-        <div id="movie-card">
-          <div id="movie-img"></div>
-          <div id="movie-info">
-            <h2 id="movie-title"></h2>
-            <p id="movie-description"></p>
-          </div>
-        </div>
       </div>
     </main>
     <footer>
-      <div class="container footer-section">
-        <p>Created by Team Alpha under MIT License</p>
+      <a href="index.html" class="footer-logo"></a>
+      <div class="footer-section">
+        <p>Created by Team Alpha under MIT License ©</p>
       </div>
     </footer>
-
+    <section class="popup popup-comments hide">
+      <div class="popup-header">
+        <i id="popup-close" class="fa-solid fa-xmark fa-2x"></i>
+      </div>
+      <div class="popup-container">
+      </div>
+    </section>
     <script type="module" src="index.js"></script>
   </body>
 </html>

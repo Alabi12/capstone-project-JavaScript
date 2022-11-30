@@ -3,17 +3,18 @@
   \*********************************************************************/
 :root {
   --color-primary: #ffe3b0;
-  --color-secondary: rgb(107, 88, 88);
+  --color-secondary: rgb(54, 54, 54);
   --color-tertiary: white;
   --color-font: white;
 }
 
 body {
-  background-color: var(--color-secondary);
+  background-color: rgb(212 162 36);
   color: var(--color-font);
   font-family: 'Montserrat', sans-serif;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  margin: 0;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -24,16 +25,32 @@ body::-webkit-scrollbar {
 .container {
   max-width: 85%;
   margin: 0 auto;
+  padding: 15px;
+  background-color: #545454;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  gap: 10px;
+  justify-content: space-around;
 }
 
 nav {
   list-style-type: none;
   display: flex;
   background-color: var(--color-secondary);
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   position: absolute;
+  left: 0;
   top: 0;
+  width: 100%;
+}
+
+.logo {
+  background-image: url(13b5b09eab1ac168a664.png);
+  width: 217px;
+  height: 45px;
+  background-size: cover;
+  background-position: center;
 }
 
 .logo p {
@@ -52,23 +69,26 @@ nav {
   margin: 0 1rem;
 }
 
+.active a {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
+  padding-bottom: 5px;
+}
+
 .navigation li a {
   text-decoration: none;
+  transition: all 1s;
+  padding: 0 0 5px 0;
   color: var(--color-font);
 }
 
-.navigation li:hover {
+.navigation li a:hover {
   color: var(--color-primary);
-  border-bottom: 2px solid var(--color-primary);
-}
-
-.active {
-  color: var(--color-primary);
-  border-bottom: 2px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
 }
 
 main {
-  margin-top: 5rem;
+  margin: 5rem 0;
 }
 
 .row {
@@ -103,6 +123,17 @@ main {
   padding-top: 10px;
 }
 
+.like-icon {
+  color: red;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+}
+
+.like-icon i {
+  font-size: 26px;
+}
+
 .movie-banner-img {
   width: 100%;
   height: 370px;
@@ -115,10 +146,17 @@ main {
 }
 
 footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--color-secondary);
+}
+
+.footer-logo {
+  background-image: url(13b5b09eab1ac168a664.png);
+  background-position: 20% 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 230px;
 }
 
 .footer-section {
@@ -133,15 +171,49 @@ button {
   padding: 0;
 }
 
-.btn {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  height: 40px;
-  border-radius: 5px;
-  width: 90%;
+.movie-button {
+  background-color: #e2a12a;
+  width: 55%;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+  padding: 6px 0;
+  transition: 0.3s;
+}
+
+.movie-button:hover {
+  background-color: #dd9000;
+  width: 60%;
+}
+
+#movie-card {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px 0 20px 0;
+  background-color: #414040;
+  transition: 0.3s;
+}
+
+#movie-card:hover {
+  background-color: #303030;
+}
+
+#movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 0;
+}
+
+#movie-title {
+  text-align: center;
+}
+
+#movie-description {
+  margin: 0;
 }
 
 .action-btns {
