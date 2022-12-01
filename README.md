@@ -4,13 +4,15 @@
 
 > This is a demo project illustrating a movie app. The app list out the movies that one can comment on it and like it. It loads diffrent movies eaach time the user reloads the page.
 
+![screenshot](./src/images/Homepage.png)
+
 ## Built With
 
 - Major languages HTML, CSS and Javascript
 - Frameworks JEST
 - Technologies used Javascript webpack
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://alabi12.github.io/capstone-project-JavaScript/dist)
 
@@ -97,11 +99,11 @@ If you like to deploy the website to the github pages please follow the link [he
 - Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/robert-alabi)
 
-  **Fuad Nabiyew**
+  **Fuad Nabiyev**
 
 - GitHub: [@githubhandle](https://github.com/FuadNabi)
-- Twitter: [@twitterhandle]()
-- LinkedIn: [LinkedIn]()
+- Twitter: [@twitterhandle](https://twitter.com/FuadNebiyev2)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/fuad-nabiyev-a5234524a/)
 
 ## 🤝 Contributing
 
