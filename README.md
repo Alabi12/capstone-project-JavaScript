@@ -1,97 +1,81 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a name="readme-top"></a>
 
-# FAMovie
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+- [👥 Authors](#authors)
+- [⭐️ Show your support](#support)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+![screenshot](./src/images/Homepage.png)
+
+# 📖 FAMovie <a name="about-project"></a>
 
 > This is a demo project illustrating a movie app. The app list out the movies that one can comment on it and like it. It loads diffrent movies eaach time the user reloads the page.
 
-![screenshot](./src/images/Homepage.png)
+## 🛠 Built With <a name="built-with"></a>
 
-## Built With
+### Tech Stack <a name="tech-stack"></a>
 
-- Major languages HTML, CSS and Javascript
-- Frameworks JEST
-- Technologies used Javascript webpack
+<details>
+  <summary>Languages</summary>
+  <ul>
+    <li>Html/CSS</li>
+    <li>JavaScript</li>
+    <li>Frameworks JEST</li>
+    <li>Technologies used Javascript webpack</li>
+  </ul>
+</details>
 
-## Live Demo
+<!-- Features -->
+<br>
 
-[Live Demo Link](https://alabi12.github.io/capstone-project-JavaScript/dist)
+### Key Features <a name="key-features"></a>
 
-## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+- **Connect to the FAMovie API**
+- **"Like" and "Comment" Functions**
+- **Async & await operations**
 
-To get a local copy up and running follow these simple example steps.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Prerequisites
+<!-- LIVE DEMO -->
 
-- You need a GitHub account.
-- You need to have a Git client installed on your computer.
-- You need to have a copy of the HTML CSS website codebase on your computer.
-- A code Editor of your choice.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-### Setup
+- [Live Demo Link](https://alabi12.github.io/capstone-project-JavaScript/dist)
 
-```
-git clone https://github.com/Alabi12/capstone-project-JavaScript.git
-cd capstone-project-JavaScript
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Install
+<!-- GETTING STARTED -->
 
-- Install all the dependencies required for the website. BY using the command below.
-  ```
-  npm install
-  ```
-- Open the index.html file in a browser.
+## 💻 Getting Started <a name="getting-started"></a>
 
-### Usage
+<ul>
+  <li>Get a copy of the project</li>
+  <li>Come into the project directory</li>
+  <li>Open the project using code editor of your choice</li>
+  <li>Open your prefered browser</li>
+</ul>
 
-For making any changes to the project the clone the project-
 
-- Folder Structure
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-  ```
-  __tests__
+<!-- AUTHORS -->
 
-  dist
+## 👥 Authors <a name="authors"></a>
 
-  src
-    css
-     style.css  //Responsible for all the stylings
+👤 **Fuad Nabiyev**
 
-    module
-      __mocks__
-          comments.js //jest mocks
-          loadApijs   //jest mocks
-
-      checkForLikes.js
-      comments.js
-      getLikes.js
-      getMovieDetails.js
-      liked.js
-      loadApijs
-      postComment.js
-
-    index.html    //main HTML File
-    index.js      //main js File
-
-  webpack.config.js
-
-  package.json
-
-  babel.config.js
-  ```
-
-### Run tests
-
-If you want to work with Chrome Developer Tools, simply run the HTML document in Google Chrome and right-click the HTML element you want to inspect. Click on "Inspect" and you will have the tools to run, analyze, and even debug the code.
-
-### Deployment
-
-If you like to deploy the website to the github pages please follow the link [here](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-
-## Authors
+- GitHub: [FuadNabi](https://github.com/FuadNabi)
+- Twitter: [FuadNebiyev2](https://twitter.com/FuadNebiyev2)
+- LinkedIn: [FuadNabiyev](https://www.linkedin.com/in/fuad-nabiyev-a5234524a/)
 
 👤 **Robert Alabi**
 
@@ -99,22 +83,35 @@ If you like to deploy the website to the github pages please follow the link [he
 - Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/robert-alabi)
 
-  **Fuad Nabiyev**
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-- GitHub: [@githubhandle](https://github.com/FuadNabi)
-- Twitter: [@twitterhandle](https://twitter.com/FuadNebiyev2)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/fuad-nabiyev-a5234524a/)
+<!-- FUTURE FEATURES -->
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-## Show your support
+Feel free to check the [issues page](https://github.com/Alabi12/capstone-project-JavaScript/issues).
 
-Give a ⭐️ if you like this project!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Acknowledgments
+<!-- SUPPORT -->
 
-- Microverse for proving this platform.
+## ⭐️ Show your support <a name="support"></a>
 
-## 📝 License
+Give a **Star** if you like this project!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](https://github.com/Alabi12/capstone-project-JavaScript/blob/dev/LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
