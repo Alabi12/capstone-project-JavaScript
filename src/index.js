@@ -2,6 +2,29 @@ import './css/style.css';
 import loadApi from './modules/loadApi.js';
 import postComment from './modules/postComment.js';
 import getComments from './modules/comments.js';
+import getLikes from './modules/getLikes.js';
+import liked from './modules/liked.js';
+import checkForLikes from './modules/checkForLikes.js';
+import filmCounter from './modules/filmCounter.js';
+
+// Likes
+const getLikesFirst = new Promise((resolve) => {
+  getLikes();
+  setTimeout(() => {
+    resolve('done');
+  }, 300);
+});
+
+getLikesFirst.then(() => {
+  new Promise((resolve) => {
+    loadApi();
+    setTimeout(() => {
+      resolve('done');
+    }, 300);
+  }).then(() => {
+    postComment();
+  });
+});
 
 // Fetch Data From API
 
@@ -27,12 +50,36 @@ const apiData = loadApi().then((data) => {
     <div id="movie-card">
       <div id="movie-img"><img src="${imageUrl}" alt="${movie.show.name}"> </div>
       <div id="movie-info">
-        <h2 id="movie-title">${movie.show.name} <button class="like-icon"><i class="fa-regular fa-heart"></i></br>3</button></h2>
+        <h2 id="movie-title">${movie.show.name} <button id="${movie.show.id}" class="like-icon"><i id="${movie.show.id}" class="fa-regular fa-heart"></i></br><p id="${movie.show.id}" class="like-p">${checkForLikes(movie.show.id)}</p></button></h2>
         <p id="movie-description"></p>
         <button id="${movie.show.id}" class="movie-button">Comment</button>
-        <button id="${movie.show.id}" class="movie-button">Reservation</button>
       </div>
     </div>`;
+
+    const likeAdd = (container) => {
+      const idParse = `${movie.show.id}`;
+      container.addEventListener('click', (event) => {
+        if (event.target.classList.contains('fa-regular') && event.target.id === idParse) {
+          liked(movie.show.id);
+          const icon = event.target;
+          icon.classList.remove('fa-regular');
+          icon.classList.add('fa-solid');
+        }
+      });
+    };
+
+    likeAdd(movieTitle);
+
+    const linksUl = document.querySelector('.navigation');
+    const filmCounterLoad = () => {
+      linksUl.innerHTML = `            <li class="active">
+          <a href="#">Home(${filmCounter(movieTitle)})<span id="totalMovies"></span></a>
+        </li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">TV Shows</a></li>
+        <li><a href="#">My List</a></li>`;
+    };
+    filmCounterLoad();
 
     const movieButtons = document.querySelectorAll('.movie-button');
     movieButtons.forEach((button) => {
@@ -96,14 +143,14 @@ const apiData = loadApi().then((data) => {
             Add Comments<span id="addCOmment"></span>
           </h2>
           <form id="addCommentForm">
-          <input type="text" placeholder="Name" name="name" />
-          <input type="hidden" placeholder="Name" name="movieId" value="${movieId}" />
+          <input type="text" placeholder="Your name..." name="name" />
+          <input type="hidden" placeholder="Your name..." name="movieId" value="${movieId}" />
           <textarea
               name="comment"
               id="comment"
               cols="30"
               rows="8"
-              placeholder="Comment"
+              placeholder="Your comment..."
               name="comment"
             ></textarea>
             <input type="submit" value="Submit" />
@@ -149,5 +196,13 @@ const apiData = loadApi().then((data) => {
     });
   });
 });
+const refreshPage = () => {
+  const likeBtns = document.querySelectorAll('.like-p');
+  likeBtns.forEach((btn) => {
+    const count = checkForLikes(parseInt(btn.id, 10));
+    btn.innerHTML = count;
+  });
+};
 
+setInterval(refreshPage, 100);
 apiData();
