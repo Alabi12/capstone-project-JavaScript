@@ -73,6 +73,8 @@
 
 [Fuad's Video Presentation](https://drive.google.com/file/d/1dIkmLdwLuuxJFlXuyXn0T9jEITjzKjNn/view?usp=share_link)
 
+[Kanban Board](https://github.com/FuadNabi/Kanban-Board/projects/1)
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
