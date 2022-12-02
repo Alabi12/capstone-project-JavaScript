@@ -67,6 +67,12 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 👥Assessment Video Links <a name="authors"></a>
+
+[Robert's Video Presentation](https://drive.google.com/file/d/1XDqDPsHlIblEHW4fTzsDZ2iw5vmcahP1/view?usp=share_link)
+
+[Fuad's Video Presentation](https://drive.google.com/file/d/1dIkmLdwLuuxJFlXuyXn0T9jEITjzKjNn/view?usp=share_link)
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -82,6 +88,7 @@
 - GitHub: [@githubhandle](https://github.com/Alabi12)
 - Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/robert-alabi)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
